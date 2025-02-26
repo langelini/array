@@ -1,5 +1,6 @@
 public class makingarrays {
-    int [] nums = new int[10];
+    int [] nums = new int[(int)(1000000 * Math.random())];
+    public double total;
     public static void main(String[] args) {
 
         System.out.println("Hello World!");
@@ -10,33 +11,21 @@ public class makingarrays {
 
     public makingarrays() {
         System.out.println("welcome to array world");
-        nums[1] = 5;
-        nums[0] = 10;
-        nums[2] = 15                                                                                                                                               ;
-        nums [ 2 ] = nums[1]*3;
-        nums  [3] = 20;
-        nums  [4] = 25;
-        nums  [5] = 30;
-        nums  [6] = 35;
-        nums  [7] = 40;
-        nums  [8] = 45;
-        nums  [9] = 50;
-
         printarray();
     }
-    public void printarray(){
-        System.out.println(nums[1]);
-        System.out.println(nums[0]);
-        System.out.println(nums[2]);
-        System.out.println(nums[3]);
-        System.out.println(nums[4]);
-        System.out.println(nums[5]);
-        System.out.println(nums[6]);
-        System.out.println(nums[7]);
-        System.out.println(nums[8]);
-        System.out.println(nums[9]);
-
-
+    public void printarray() {
+        for (int x = 0; x < nums.length; x++) {
+            nums[x] = (int) (100 * Math.random());
+        }
+        for (int x = 0; x < nums.length; x++) {
+            System.out.println(nums[x]);
+        }
+        for (int x = 0; x < nums.length; x++) {
+            total = total+nums[x];
+        }
+        System.out.println("this is the total: "+total);
+        System.out.println("this is the AVG: "+total /nums.length);
     }
+
 
 }
