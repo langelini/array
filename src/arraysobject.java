@@ -6,7 +6,12 @@ public class arraysobject {
     public arraysobject (){
         System.out.println("making arrays with objects!");
         burger innout = new burger(142.99);
-        burg[0] = innout;
-        burg[0].printinfo();
+        for(int x = 0; x<10; x++){
+            burg[x] = innout;
+            innout.price = (int)(Math.random()*100);
+            burg[x].printinfo();
+            System.out.println(); // to seperate different burgs
+
+        }
     }
 }
