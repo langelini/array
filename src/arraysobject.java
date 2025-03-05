@@ -5,13 +5,21 @@ public class arraysobject {
     burger[] burg = new burger [10];
     public arraysobject (){
         System.out.println("making arrays with objects!");
-        burger innout = new burger(142.99);
-        for(int x = 0; x<10; x++){
+        for(int x = 0; x<burg.length; x++) {
+            burger innout = new burger((Math.random() * 100));
             burg[x] = innout;
-            innout.price = (int)(Math.random()*100);
+        }
+        changesizes();
+        printArray();
+    }
+    public void printArray(){
+        for(int x=0; x< burg.length; x++){
             burg[x].printinfo();
-            System.out.println(); // to seperate different burgs
-
         }
     }
+public void changesizes(){
+        for(int x = 0;x<burg.length;x++){
+            burg[x].size = (int) (Math.random()*10)+10;
+        }
+}
 }

@@ -20,6 +20,7 @@ public class burger {
         System.out.println("price: " +price);
         System.out.println("size: " + size);
         System.out.println("is Greasy: " + isGreasy);
+        System.out.println();
     }
 
 }
