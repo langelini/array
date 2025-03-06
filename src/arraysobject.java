@@ -11,6 +11,7 @@ public class arraysobject {
         }
         changesizes();
         printArray();
+        totalsushi();
     }
     public void printArray(){
         for(int x=0; x< burg.length; x++){
@@ -21,5 +22,12 @@ public void changesizes(){
         for(int x = 0;x<burg.length;x++){
             burg[x].size = (int) (Math.random()*10)+10;
         }
+}
+public void totalsushi() {
+        int totalsum = 0;
+    for (int x = 0; x < burg.length; x++) {
+        totalsum = totalsum + burg[x].size;
+    }
+    System.out.println("total size sum: "+totalsum);
 }
 }
