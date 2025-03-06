@@ -1,6 +1,6 @@
 public class arraysobject {
     public static void main(String[] args) {
-        arraysobject a = new arraysobject();
+
     }
     burger[] burg = new burger [10];
     public arraysobject (){
@@ -14,19 +14,19 @@ public class arraysobject {
         totalsushi();
     }
     public void printArray(){
-        for(int x=0; x< burg.length; x++){
-            burg[x].printinfo();
+        for (burger burger : burg) {
+            burger.printinfo();
         }
     }
 public void changesizes(){
-        for(int x = 0;x<burg.length;x++){
-            burg[x].size = (int) (Math.random()*10)+10;
-        }
+    for (burger burger : burg) {
+        burger.size = (int) (Math.random() * 10) + 10;
+    }
 }
 public void totalsushi() {
         int totalsum = 0;
-    for (int x = 0; x < burg.length; x++) {
-        totalsum = totalsum + burg[x].size;
+    for (burger burger : burg) {
+        totalsum = totalsum + burger.size;
     }
     System.out.println("total size sum: "+totalsum);
 }
